@@ -17,49 +17,93 @@ body {
 
 /* ##### navbar styling ##### */
 .navbar {
-  background: #a03037;
-  height: 60px;
+  background: #343a40;
+  height: 80px;
   position: fixed;
   top: 0;
   width: 100%;
 }
 
-/* ##### product section styiling ##### */
-.product-section {
-  margin-top: 5rem;
-}
-
-.sort-section {
+.nav-container {
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1rem 0;
 }
 
-.sort-section h3 sub {
-  font-size: 12px;
-  color: #9d9d9d;
+.left {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
 }
 
-.sort-section select {
-  height: 33px;
+.left h1 {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.left input {
+  width: 490px;
   border-radius: 3px;
+  padding: 0.5rem;
+  border: none;
+}
+
+.right {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-container i {
+  color: #fff;
+}
+
+/* ##### product section styiling ##### */
+.products-container {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.sort-section {
+  width: 20%;
+  background: #343a40;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 1rem;
+  color: #fff;
+  gap: 2rem;
+}
+
+.sort-section button {
+  border: none;
+  text-transform: capitalize;
+  padding: 0.5rem 0;
+  border-radius: 4px;
+  font-size: 1rem;
 }
 
 .products {
+  width: 78%;
   display: flex;
   flex-wrap: wrap;
-  gap: 2.5rem;
+  gap: 3rem;
 }
 
 .product {
-  border: 1px solid #e2e2e2;
-  width: 270px;
-  height: 350px;
+  cursor: pointer;
+  text-decoration: none;
+  width: 350px;
+  height: 400px;
+  max-height: 500px;
+  box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
+    0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .product:hover {
@@ -68,10 +112,10 @@ body {
 
 .product .thumbnail {
   background: #f5f5f5;
-  height: 190px;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 60%;
 }
 
 .product img {
@@ -86,11 +130,15 @@ body {
 
 .product-details h4 {
   margin: 0.5rem 0;
+  font-size: 1.125rem;
+  color: #000;
 }
 
 .product-details h5 {
   font-weight: 700;
   margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #000;
 }
 
 .rating {
@@ -103,12 +151,84 @@ body {
   margin-bottom: 0.5rem;
 }
 
-button {
+.products button {
   width: 100%;
   border: none;
-  padding: 0.3rem 0;
-  background: #a03037;
+  padding: 0.5rem 0;
+  background: #007bff;
   color: #fff;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+/* ##### detail container styling ##### */
+.detail-container {
+  margin-top: 6rem;
+}
+
+.detail-container a {
+  text-decoration: none;
+  color: #9d9d9d;
+}
+
+.detail-container span {
+  color: #000;
+  font-size: 12px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.details .left {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container {
+  border: 1px solid #d1d1d1;
+  border-radius: 2px;
+  width: 100%;
+  padding: 1rem;
+}
+
+.left .buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons button {
+  width: 48%;
+  text-transform: capitalize;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.buttons button:first-child {
+  background: #007bff;
+}
+
+.buttons button:last-child {
+  background: #343a40;
+}
+
+.image-container img {
+  width: 100%;
+}
+
+.details .right {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+.right .rating span {
+  color: #fff;
 }

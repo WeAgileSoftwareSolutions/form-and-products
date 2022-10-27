@@ -1,7 +1,7 @@
 const products = [];
 let html = "";
 const productDiv = document.querySelector(".products");
-const productCount = document.querySelector(".sort-section sub");
+// const productCount = document.querySelector(".sort-section sub");
 
 fetch("https://dummyjson.com/products")
   .then((response) => response.json())
@@ -9,7 +9,7 @@ fetch("https://dummyjson.com/products")
     products.push(...data.products);
     products.forEach((product) => {
       html += `
-            <div class="product">
+            <a href="./product-detail.html" class="product">
             <div class="thumbnail">
                <img
                  src=${product.thumbnail}
@@ -22,9 +22,9 @@ fetch("https://dummyjson.com/products")
                <h5>$ ${product.price}</h5>
                <button>Add to cart</button>
              </div>
-           </div>
+           </a>
              `;
     });
-    productCount.textContent = `(${products.length} items)`;
+    // productCount.textContent = `(${products.length} items)`;
     productDiv.innerHTML = html;
   });

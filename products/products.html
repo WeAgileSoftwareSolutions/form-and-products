@@ -5,35 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./products.css" />
+    <script
+      src="https://kit.fontawesome.com/86ddb1ba29.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Products</title>
   </head>
   <body>
     <nav class="navbar">
-      <div class="container"></div>
+      <div class="container nav-container">
+        <div class="left">
+          <h1>products</h1>
+          <form>
+            <input type="search" placeholder="Search..." />
+          </form>
+        </div>
+        <div class="right">
+          <i class="fas fa-user-circle fa-2x"></i>
+          <i class="fas fa-shopping-cart fa-2x"></i>
+        </div>
+      </div>
     </nav>
-    <main class="container product-section">
+    <main class="products-container">
       <div class="sort-section">
-        <h3>Products <sub></sub></h3>
-        <select>
-          <option selected disabled>Sort by relevance</option>
-        </select>
+        <h1>Filter Products</h1>
+        <div>
+          <input type="radio" name="filter" id="filter" />
+          <label for="filter">Ascending</label>
+        </div>
+        <div>
+          <input type="radio" name="filter" id="filter" />
+          <label for="filter">Descending</label>
+        </div>
+        <div>
+          <input type="checkbox" name="filter" id="filter" />
+          <label for="filter">Include Out of Stock</label>
+        </div>
+        <div>
+          <label>Rating: </label>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <button>clear filters</button>
       </div>
-      <div class="products">
-        <!-- <div class="product">
-          <div class="thumbnail">
-             <img
-               src="image path"
-               alt="product-image"
-             />
-           </div>
-           <div class="product-details">
-             <h4>title</h4>
-             <div class="rating">${product.rating} <span>&#9733;</span></div>
-             <h5>$ ${product.price}</h5>
-             <button>Add to cart</button>
-           </div>
-         </div> -->
-      </div>
+      <div class="products"></div>
     </main>
     <script src="./script.js"></script>
   </body>
